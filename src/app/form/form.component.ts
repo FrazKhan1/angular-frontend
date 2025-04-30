@@ -18,11 +18,18 @@ interface FormData {
   imports: [CommonModule, RouterModule],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css',
+  standalone: true,  
+
 })
 export class FormComponent {
   title: string = 'Form';
   forms: any[] = [];
-  isLoading = false;
+  isLoading:boolean = false;
+
+  today: Date = new Date();
+  amount: number = 1234.56;
+  name: string = 'john doe';
+  message: string = 'This is a long message';
 
   constructor(
     private formService: FormService,
@@ -31,7 +38,7 @@ export class FormComponent {
 
   ngOnInit() {
     this.getForms();
-    this.loader()
+    this.loader();
   }
 
   loader() {
