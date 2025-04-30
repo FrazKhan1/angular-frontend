@@ -9,6 +9,8 @@ import {  ToastrService } from 'ngx-toastr';
   imports: [CommonModule, RouterModule],
   templateUrl: './form-details.component.html',
   styleUrl: './form-details.component.css',
+  standalone: true,  
+
 })
 export class FormDetailsComponent {
   constructor(

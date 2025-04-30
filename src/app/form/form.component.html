@@ -90,4 +90,9 @@
       class="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"
     ></div>
   </div>
+
+  <p>{{ today | date | uppercase }}</p>
+  <p>{{ amount | currency : "GBP" }}</p>
+  <p>{{ name | lowercase }}</p>
+  <p>{{ message | slice : 0 : 10 }}</p>
 </div>
